@@ -64,11 +64,13 @@
           p1.picks($(this).data('pick'));
           p2.picks('rock');
 
+         // $('#result').text(game.winningMessage());
           $('<li>' + game.winningMessage() + '</li>').prependTo('#results').slideDown();
 
-          $('li:gt(3)').fadeOut(function(){
+          $('li:gt(4)').fadeOut(function(){
             $(this).remove();
           });
+          
         })
       })
     </script>
